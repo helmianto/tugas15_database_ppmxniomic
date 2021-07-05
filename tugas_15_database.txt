@@ -1,0 +1,34 @@
+CREATE DATABASE niomic;
+
+CREATE TABLE `niomic`.`demography` ( `kode_bps` VARCHAR(6) NOT NULL , `nama` VARCHAR(50) NOT NULL , `ibukota` VARCHAR(50) NOT NULL , `pupulasi` INT NOT NULL , `luas` FLOAT NOT NULL , `pulau` VARCHAR(50) NOT NULL , PRIMARY KEY (`kode_bps`)) ENGINE = InnoDB;
+
+INSERT INTO 'niomic' VALUES 
+('11', 'Aceh', 'Banda Aceh', 4494410, 56500.51, 'Sumatera'),
+('12', 'Sumatera Utara', 'Medan', 12982204, 72427.81, 'Sumatera'),
+('13', 'Sumatera Utara', 'Medan', 4846909, 42224.65, 'Sumatera'),
+('14', 'Sumatera Barat', 'Padang', 5538367, 87844.23, 'Sumatera'),
+('15', 'Riau', 'Pekanbaru', 3092265, 45348.49, 'Sumatera'),
+('16', 'Jambi', 'Jambi', 7450394, 60302.54, 'Sumatera'),
+('17', 'Sumatera Selatan', 'Palembang', 1715518, 19795.15, 'Sumatera'),
+('18', 'Bengkulu', 'Bengkulu', 7608405, 37735.15, 'Sumatera'),
+('19', 'Lampung', 'Bandar Lampung', 1223296, 16424.14, 'Sumatera'),
+('21', 'Kepualuan Riau', 'Tanjung Pinang', 1679163, 8084.01, 'Sumatera'),
+('31', 'Daerah Khusus Ibukota Jakarta', 'Jakarta Pusat', 9607787, 740.29, 'Jawa'),
+('32', 'Jawa Barat', 'Bandung', 43053732, 36925.05, 'Jawa'),
+('33', 'Jawa Tengah', 'Semarang', 32382657, 32799.71, 'Jawa'),
+('34', 'Daerah Istimewa Yogyakarta', 'Yogyakarta', 3457491, 3133.15, 'Jawa'),
+('35', 'Jawa Timur', 'Surabaya', 37476757, 46689.04, 'Jawa'),
+('36', 'Banten', 'Serang', 10632166, 9018.64, 'Jawa'),
+('51', 'Bali', 'Denpasar', 3890757, 5449.37, 'Nusa Tenggara'),
+('52', 'Nusa Tenggara Barat', 'Mataram', 4500212, 19708.79, 'Nusa Tenggara'),
+('53', 'Nusa Tenggara Timur', 'Kupang', 4683827, 40137.87, 'Nusa Tenggara'),
+('61', 'Kalimantan Barat', 'Pontianak', 4395083, 120114.32, 'Kalimantan'),
+('62', 'Kalimantan Tengah', 'Palangkaraya', 2212089, 153564.50, 'Kalimantan'),
+('63', 'Kalimantan Selatan', 'Banjarmasin', 3626616, 37530.52, 'Kalimantan'),
+('64', 'Kalimantan Timur', 'Samarinda', 3553143, 194549.08, 'Kalimantan'),
+('65', 'Kalimantan Utara', 'Tanjung Selor', 738163, 72567.49, 'Kalimantan'),
+('71', 'Sulawesi Utara', 'Manado', 2270596, 13930.73, 'Sulawesi');
+
+DELETE FROM `demography` WHERE pulau = 'Nusa Tenggara' AND pulau = 'Kalimantan';
+
+SELECT `nama`, `ibukota`, `pupulasi`, `luas` FROM `demography`;
